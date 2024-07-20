@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #12172b;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Hero Section Styles */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px 50px 20px;
+    height: 100vh;
+    background: #12172b;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h2 {
+    color: #ff6600;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ff6600; /* Cursor effect */
+    animation: typing 4s steps(22) 1s 1 normal both, blinkTextCursor 500ms steps(22) infinite normal;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.5em;
+    border: 1px solid #ff6600;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.footer-hide {
+    transform: translateY(100%); /* Hide the footer by moving it off-screen */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: #ff6600;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: white;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 150px 20px 50px 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}
